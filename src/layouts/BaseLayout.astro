@@ -1,20 +1,36 @@
 ---
-layout: ../layouts/BaseLayout.astro
 ---
-<html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carla - Cours de Portugais</title>
-    <link rel="stylesheet" href="/src/styles/global.css" />
-  </head>
-  <body class="font-sans p-4">
-    <header class="mb-8">
-      <h1 class="text-3xl font-bold text-purple-700">Cours de Portugais</h1>
-      <nav class="mt-2"><a href="/" class="text-blue-600">Accueil</a></nav>
-    </header>
-    <main>
-      <slot />
-    </main>
-  </body>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carla - Portuguese Lessons</title>
+  <link rel="stylesheet" href="/src/styles/global.css" />
+</head>
+
+<body class="p-4 font-sans bg-white text-gray-900">
+  <header class="mb-6 border-b pb-4">
+    <nav class="flex justify-between items-center">
+      <h1 class="text-2xl font-bold">
+        <a href="/" class="hover:text-blue-600 transition-colors">📘 Carla</a>
+      </h1>
+      <ul class="flex gap-6 text-lg">
+        <li>
+          <a href="/" class="hover:underline">Home</a>
+        </li>
+        <li>
+          <a href="/lessons" class="hover:underline">Lessons</a>
+        </li>
+        <li>
+          <a href="/contact" class="hover:underline">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main class="max-w-3xl mx-auto">
+    <slot />
+  </main>
+</body>
+
 </html>

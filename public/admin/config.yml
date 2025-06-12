@@ -6,9 +6,9 @@ media_folder: "public/images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "cours"
-    label: "Cours"
-    folder: "src/content/cours"
+  - name: "lessons"
+    label: "lessons"
+    folder: "src/content/lessons"
     create: true
     slug: "{{slug}}"
     fields:
