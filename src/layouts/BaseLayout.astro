@@ -1,0 +1,40 @@
+---
+import '../styles/global.css';
+---
+
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carla Website</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+
+  <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
+    <header class="w-full p-4 flex justify-between items-center border-b border-gray-300 dark:border-gray-700">
+      <h1 class="text-xl font-semibold">Carla Website</h1>
+      <nav class="space-x-4">
+          <a href="/" class="hover:underline">Home</a>
+          <a href="/about" class="hover:underline">About</a>
+          <a href="/markdown-page" class="hover:underline">Docs</a>
+          <a href="/hero" class="hover:underline">Hero</a>
+          <a href="/sidebar-page" class="hover:underline">Sidebar page</a>
+          <a href="/blog/index" class="hover:underline">Blog</a>
+        </nav>
+      <button
+        class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition"
+        onclick="document.documentElement.classList.toggle('dark')"
+      >
+        Toggle Dark Mode
+      </button>
+    </header>
+
+    <main class="flex-1 container mx-auto px-4 py-8 animate-fade-in">
+      <slot />
+    </main>
+
+    <footer class="text-center text-sm py-4 text-gray-500 dark:text-gray-400">
+      &copy; {new Date().getFullYear()} Carla. All rights reserved.
+    </footer>
+  </body>
+</html>

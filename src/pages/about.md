@@ -1,5 +1,5 @@
 ---
-title: 'Markdown + Tailwind'
+title: 'About me'
 layout: ../layouts/BaseLayout.astro
 ---
 
