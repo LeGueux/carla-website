@@ -1,17 +1,23 @@
 {
   "name": "carla-website",
   "version": "1.0.0",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "astro": "astro"
   },
   "dependencies": {
-    "astro": "^3.0.0"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.3.2",
-    "postcss": "^8.4.21",
-    "autoprefixer": "^10.4.14"
+    "@astrojs/mdx": "^4.3.0",
+    "@astrojs/rss": "^4.0.12",
+    "@astrojs/sitemap": "^3.4.1",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.9.2",
+    "autoprefixer": "^10.4.21",
+    "canvas-confetti": "^1.9.3",
+    "postcss": "^8.5.5",
+    "sharp": "^0.34.2",
+    "tailwindcss": "^3.3.2"
   }
 }

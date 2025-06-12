@@ -1,0 +1,36 @@
+---
+import "../styles/global.css";
+const { content } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{content.title}</title>
+  </head>
+  <body class="p-4 font-sans bg-white text-gray-900">
+    <header class="mb-6 border-b pb-4">
+      <nav class="flex justify-between items-center">
+        <h1 class="text-2xl font-bold">
+          <a href="/" class="hover:text-blue-600 transition-colors">📘 Carla</a>
+        </h1>
+        <ul class="flex gap-6 text-lg">
+          <li>
+            <a href="/" class="hover:underline">Home</a>
+          </li>
+          <li>
+            <a href="/lessons" class="hover:underline">Lessons</a>
+          </li>
+          <li>
+            <a href="/contact" class="hover:underline">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="max-w-3xl mx-auto">
+      <slot />
+    </main>
+  </body>
+</html>
