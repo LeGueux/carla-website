@@ -1,0 +1,20 @@
+---
+layout: ../layouts/BaseLayout.astro
+---
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carla - Cours de Portugais</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+  </head>
+  <body class="font-sans p-4">
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold text-purple-700">Cours de Portugais</h1>
+      <nav class="mt-2"><a href="/" class="text-blue-600">Accueil</a></nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>
