@@ -1,19 +1,28 @@
 ---
-import BlogLayout from '../../layouts/BlogLayout.astro';
-import { getEntryBySlug } from 'astro:content';
+// Import du layout BaseLayout (ou un autre)
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+import { getEntryBySlug, getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map(post => ({
+    params: { slug: post.slug },
+  }));
+}
 
 const { slug } = Astro.params;
 const post = await getEntryBySlug('blog', slug);
 
 if (!post) {
-  throw new Error(`Post not found: ${slug}`);
+  throw new Error(`Post not found for slug: ${slug}`);
 }
 ---
 
-<BlogLayout title={post.data.title}>
-  <article>
+<BaseLayout>
+  <article class="prose max-w-none">
     <h1>{post.data.title}</h1>
-    <p>{post.data.pubDate}</p>
-    <div innerHTML={post.body} />
+    <p>{post.data.date}</p>
+    <div set:html={post.body}></div>
   </article>
-</BlogLayout>
+</BaseLayout>
